@@ -1,0 +1,62 @@
+1. What is the answer of this question?
+A. A
+B. B
+C. C
+D. D
+
+2. What is the answer of question 5?
+A. C
+B. D
+C. A
+D. B 
+
+3. Among answers of following four questions, which one is different with the rest three? 
+A. Question 3
+B. Question 6
+C. Question 2
+D. Question 4
+
+4. Which pair have same answer?
+A. Question 1 and 5
+B. Question 2 and 7
+C. Question 1 and 9
+D. Question 6 and 10
+
+5. The answer of which question is the same as this question?
+A. Question 8
+B. Question 4
+C. Question 9
+D. Question 7
+
+6. Which pair of questions got the same answer as question 8?
+A. Question 2 and 4
+B. Question 1 and 6
+C. Question 3 and 10
+D. Question 5 and 9
+
+7. Considering all ten answers, which option is selected the least?
+A. C
+B. B
+C. A
+D. D
+
+8. The answer to which question is not an adjacent option to the answer of question 1?
+A. Question 7
+B. Question 5
+C. Question 2
+D. Question 10
+
+9. Given two statements, "answers to question 1 and 6 are same" and "answers to question X and 5 are same",
+if only one is true, what will X be?
+A. 6
+B. 10
+C. 2
+D. 9
+
+10. Considering all ten answers, what is the difference between the most and least selected option count?
+A. 3
+B. 2
+C. 4
+D. 1
+
+
