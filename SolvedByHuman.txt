@@ -1,0 +1,64 @@
+To make it short, for any question X(hereinafter referred to as QX) the answer will be noted as AX.
+For each derivation, I will use bracket to indicate the question that provides the necessary info in that step, e.g [Q1(hint); blah-blah info)].
+
+Let's start with Q6.
+1. Assume A6 = A.
+    A2 = A4 = A8 [Q6]
+    A3 ∈ (A, B) [Q3(A2 = A4)]
+    A3 = B [Q3; A6 = A]
+    A2 = A4 = A8 = B [Q3; A3 = B]
+    A5 = D [Q2]
+    A7 = A2 = B [Q4]*
+    A7 = A5 = D [Q5]*
+    => * result in contradiction of A7.
+
+2. Assume A6 = B.
+    A1 = A6 = A8 = B [Q6]
+    Observing Q3.
+        a. A3 = A: A2 = A4 = A6 = B => proceed to next step with this valid guess.
+        b. A3 = B: A6 ≠ A3 => incorrect since A6 = B = A3.
+        c. A3 = C: A6 = A3 = C => incorrect since A6 = B.
+        d. A3 = D: A6 = A3 = D => incorrect since A6 = B.
+    A5 = D [Q2]
+    A7 = A2 = B [Q4]*
+    A7 = A5 = D [Q5]*
+    => * result in contradiction of A7.
+
+3. Assume A6 = C.
+    A3 = A8 = A10 [Q6]
+        a. Assume A3 = A8 = A10 = A.
+            A2 = A4 = A6 = C [Q3]
+            A5 = A [Q2]
+            Since there are four As and three Cs up to now, and according to Q10, the rest three slots will be distributed as "one B, two Ds" or "two Bs, one D".
+                i. A7 = B: A1 = A9 = D => incorrect since violating Q9.
+                ii. A7 = D: A1 = A9 = B => valid answer.
+        b. Assume A3 = A8 = A10 = B.
+            A2 = A4 = A3 = B [Q3]
+            A5 = D [Q2]
+            A7 = A2 = B [Q4]*
+            A7 = A5 = D [Q5]*
+            => * result in contradiction of A7.
+        c. Assume A3 = A8 = A10 = C.
+            A4 = A3 = A6 = C, A2 ∈ (A, B, D) [Q3]
+            Since there are five Cs, it is not possible to have another C according to Q10, and the least selection count should be one.
+                i. A2 = A: A5 = C => another C, incorrect.
+                ii. A2 = B: A5 = D, A7 = A5 = D => D is the least selected option which selected twice, incorrect.
+                iii. A2 = D: A5 = B, A4 = A5 = B => incorrect since A4 = C as in the assumption.
+        d. Assume A3 = A8 = A10 = D.
+            A3 = A6 = A2 [Q3]
+            => incorrect since A6 = C, A3 = D.
+
+4. Assume A6 = D.
+    A5 = A9 = A8 [Q6]
+    Both A and C will be valid answer for Q5, which is incorrect.
+    => invalid to proceed.
+
+Therefore, we got final answer as in 3.a.ii, which is BCACACDABA.
+
+
+Some Tips:
+1. I noted down all the know answers up to that moment in an array on paper, so checking relation between answers will be easier. e.g:
+    Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10
+    A     B  C     D
+
+2. Start with question 6 or question 3, which contains more direct info to final answers than other questions.
