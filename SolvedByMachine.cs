@@ -286,7 +286,7 @@ namespace CopQuiz
 
         public bool CheckAnswer(char[] answers)
         {
-            return (answers[_X - 1] == answers[4]) != (answers[0] == answers[6]);
+            return (answers[_X - 1] == answers[4]) != (answers[0] == answers[5]);
         }
     }
 
