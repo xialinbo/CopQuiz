@@ -34,7 +34,7 @@ public class Solution
 
     static boolean IsValid(char[] answers)
     {
-        var questions = new ArrayList<IValidable>(
+        var questions = new ArrayList<IVerifiable>(
             Arrays.asList(
                 // Q2
                 new Question(2)

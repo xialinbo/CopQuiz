@@ -1,19 +1,19 @@
 import java.util.*; 
 
-public class Question implements IValidable
+public class Question implements IVerifiable
 {
     public int QuestionIndex;
-    public HashMap<Character, ArrayList<IValidable>> Options
-        = new HashMap<Character, ArrayList<IValidable>>();
+    public HashMap<Character, ArrayList<IVerifiable>> Options
+        = new HashMap<Character, ArrayList<IVerifiable>>();
 
     public Question(int questionNumber)
     {
         QuestionIndex = questionNumber - 1;
     }
 
-    public Question AddOption(char option, IValidable condition)
+    public Question AddOption(char option, IVerifiable condition)
     {
-        var conditions = new ArrayList<IValidable>();
+        var conditions = new ArrayList<IVerifiable>();
         if (Options.containsKey(option))
         {
             conditions = Options.get(option);
@@ -40,7 +40,7 @@ public class Question implements IValidable
     }
 }
 
-class AbsoluteChecking implements IValidable
+class AbsoluteChecking implements IVerifiable
 {
     private int _QuestionIndex;
     private char _Answer;
@@ -57,7 +57,7 @@ class AbsoluteChecking implements IValidable
     }
 }
 
-class RelativeChecking implements IValidable
+class RelativeChecking implements IVerifiable
 {
     private int _QuestionIndex;
     private int _TheOtherQuestionIndex;
@@ -74,7 +74,7 @@ class RelativeChecking implements IValidable
     }
 }
 
-class OnlyYouChecking implements IValidable
+class OnlyYouChecking implements IVerifiable
 {
     private int _You;
     private int _Others1;
@@ -97,7 +97,7 @@ class OnlyYouChecking implements IValidable
     }
 }
 
-class LeastSelectedChecking implements IValidable
+class LeastSelectedChecking implements IVerifiable
 {
     private char _LeastSelectedOption;
 
@@ -128,7 +128,7 @@ class LeastSelectedChecking implements IValidable
     }
 }
 
-class OptionAdjacentChecking implements IValidable
+class OptionAdjacentChecking implements IVerifiable
 {
     private int _QuestionIndex;
     private int _TheOtherQuestionIndex;
@@ -145,7 +145,7 @@ class OptionAdjacentChecking implements IValidable
     }
 }
 
-class XChecking implements IValidable
+class XChecking implements IVerifiable
 {
     private int _XIndex;
 
@@ -160,7 +160,7 @@ class XChecking implements IValidable
     }
 }
 
-class CountDifferenceChecking implements IValidable
+class CountDifferenceChecking implements IVerifiable
 {
     private int _CountDifference;
 
