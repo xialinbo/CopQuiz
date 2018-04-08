@@ -1,4 +1,4 @@
 public interface IVerifiable
 {
-    public boolean IsCorrectAnswer(char[] answers);
+    public boolean IsAnswerCorrect(char[] answers);
 }

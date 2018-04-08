@@ -28,12 +28,12 @@ public class Question implements IVerifiable
         return this;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         var selectedOption = Options.get(answers[QuestionIndex]);
         for (var condition : selectedOption)
         {
-            if (!condition.IsCorrectAnswer(answers)) return false;
+            if (!condition.IsAnswerCorrect(answers)) return false;
         }
 
         return true;
@@ -51,7 +51,7 @@ class AbsoluteChecking implements IVerifiable
         _Answer = answer;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         return answers[_QuestionIndex] == _Answer;
     }
@@ -68,7 +68,7 @@ class RelativeChecking implements IVerifiable
         _TheOtherQuestionIndex = theOtherQuestionNumber - 1;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         return answers[_QuestionIndex] == answers[_TheOtherQuestionIndex];
     }
@@ -89,7 +89,7 @@ class OnlyYouChecking implements IVerifiable
         _Others3 = others3 - 1;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         return answers[_You] != answers[_Others1]
                && answers[_Others1] == answers[_Others2]
@@ -106,7 +106,7 @@ class LeastSelectedChecking implements IVerifiable
         _LeastSelectedOption = leastSelectedOption;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         var distribution = CharArrayHelper.GetHistogram(answers);
 
@@ -139,7 +139,7 @@ class OptionAdjacentChecking implements IVerifiable
         _TheOtherQuestionIndex = theOtherQuestionNumber - 1;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         return Math.abs(answers[_QuestionIndex] - answers[_TheOtherQuestionIndex]) != 1;
     }
@@ -154,7 +154,7 @@ class XChecking implements IVerifiable
         _XIndex = x - 1;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         return (answers[_XIndex] == answers[4]) != (answers[0] == answers[5]);
     }
@@ -169,7 +169,7 @@ class CountDifferenceChecking implements IVerifiable
         _CountDifference = difference;
     }
 
-    public boolean IsCorrectAnswer(char[] answers)
+    public boolean IsAnswerCorrect(char[] answers)
     {
         var distribution = CharArrayHelper.GetHistogram(answers);
         return distribution.getLast().getValue() - distribution.getFirst().getValue() == _CountDifference;
