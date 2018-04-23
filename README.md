@@ -1,5 +1,5 @@
 # CopQuiz
-The original quiz can be found in https://weibo.com/5431447659/G5kJAkdqB <br />
+The original quiz can be found in [Weibo](https://weibo.com/5431447659/G5kJAkdqB)
 
 ## Remark
 * The problem is a purely logic challenge, while here you will see 2 solutions to it.
